@@ -13,6 +13,7 @@
 		4B69A72120E250E20082ABB5 /* rotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A72020E250E20082ABB5 /* rotateViewController.swift */; };
 		4B69A72320E271500082ABB5 /* ColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A72220E271500082ABB5 /* ColorsTableViewController.swift */; };
 		4B69A72520E276600082ABB5 /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A72420E276600082ABB5 /* ColorsTableViewCell.swift */; };
+		4B69A72720E28AA70082ABB5 /* tableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A72620E28AA70082ABB5 /* tableDelegate.swift */; };
 		4BA6617420E1EDCD002A5122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6617320E1EDCD002A5122 /* AppDelegate.swift */; };
 		4BA6617620E1EDCD002A5122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6617520E1EDCD002A5122 /* ViewController.swift */; };
 		4BA6617920E1EDCD002A5122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA6617720E1EDCD002A5122 /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
@@ -58,6 +59,7 @@
 		4B69A72020E250E20082ABB5 /* rotateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rotateViewController.swift; sourceTree = "<group>"; };
 		4B69A72220E271500082ABB5 /* ColorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewController.swift; sourceTree = "<group>"; };
 		4B69A72420E276600082ABB5 /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
+		4B69A72620E28AA70082ABB5 /* tableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableDelegate.swift; sourceTree = "<group>"; };
 		4BA6617020E1EDCD002A5122 /* CatsMorohing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsMorohing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA6617320E1EDCD002A5122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BA6617520E1EDCD002A5122 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				4BA661A720E215DE002A5122 /* RepeatViewController.swift */,
 				4BA661A520E1FC05002A5122 /* EnterViewController.swift */,
 				4B69A71E20E240B00082ABB5 /* colorDelegate.swift */,
+				4B69A72620E28AA70082ABB5 /* tableDelegate.swift */,
 				4BA661A120E1F3D3002A5122 /* UIImageViewWithMask.swift */,
 				4BA6617A20E1EDCF002A5122 /* Assets.xcassets */,
 				4BA6617C20E1EDCF002A5122 /* LaunchScreen.storyboard */,
@@ -410,6 +413,7 @@
 				4B69A72520E276600082ABB5 /* ColorsTableViewCell.swift in Sources */,
 				4BA661A620E1FC05002A5122 /* EnterViewController.swift in Sources */,
 				4B69A72120E250E20082ABB5 /* rotateViewController.swift in Sources */,
+				4B69A72720E28AA70082ABB5 /* tableDelegate.swift in Sources */,
 				4B69A71D20E23A030082ABB5 /* Color.swift in Sources */,
 				4B69A72320E271500082ABB5 /* ColorsTableViewController.swift in Sources */,
 				4BA6617620E1EDCD002A5122 /* ViewController.swift in Sources */,

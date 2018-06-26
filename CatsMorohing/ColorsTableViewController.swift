@@ -11,18 +11,14 @@ import UIKit
 class ColorsTableViewController: UITableViewController {
 
     var colors=[Color]()
-    func uiColor2Hex(顏色:UIColor)->String{
-        var red:CGFloat = 0.0
-        var gre:CGFloat = 0.0
-        var blu:CGFloat = 0.0
-        var alp:CGFloat = 0.0
-        顏色.getRed(&red, green: &gre, blue:
-            &blu, alpha: &alp)
-        return String(format: "#%02x%02x%02x", Int(red * 255), Int(gre * 255),Int(blu * 255))
-        
-    }
+
     func rgb2Hex(紅:Float,綠:Float,藍:Float)->String{
-        return String(format: "#%02x%02x%02x", Int(紅 * 255), Int(綠 * 255),Int(藍 * 255))
+            
+            
+            let rgb:Int = (Int)(紅*255)<<16 | (Int)(綠*255)<<8 | (Int)(藍*255)<<0
+            
+        return NSString(format:"#%06x", rgb) as String
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,10 +63,27 @@ class ColorsTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,forRowAt indexPath: IndexPath) {
-        let rgb = colors[indexPath.row]
-        cell.backgroundColor = UIColor(red: CGFloat(rgb.red), green: CGFloat(rgb.green), blue: CGFloat(rgb.blue), alpha: 1)
+ 
+    @IBOutlet weak var refreshingControl: UIRefreshControl!
+    @IBAction func refreshControl(_ sender: Any) {
+        
+        if let colors=Color.readColorsFromFile(){
+            self.colors = colors
+        }else{
+            self.colors.insert(Color(red: 1, green: 1, blue: 1), at: 0)
+        }
+        tableView.reloadData()
+        refreshingControl.endRefreshing()
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.colors.remove(at: indexPath.row)
+            Color.saveColorsToFile(catsColor: colors)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -115,6 +115,15 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="p8x-TG-uXT"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="YhJ-02-lEt">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshControl:" destination="f4N-Vv-gqy" eventType="valueChanged" id="YMD-lI-Kfg"/>
+                        </connections>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="refreshingControl" destination="YhJ-02-lEt" id="3eg-kV-IJF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUE-3I-9g5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
